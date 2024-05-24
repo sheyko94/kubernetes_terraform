@@ -11,6 +11,6 @@ runs:
   using: "composite"
   steps: 
     - run: |
-        cd ${{ inputs.terraform-folder }}
+        cd ${{ inputs.path }}
         terraform ${{ inputs.command }}
       shell: bash
