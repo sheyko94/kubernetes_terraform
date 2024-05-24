@@ -12,5 +12,6 @@ runs:
   steps: 
     - run: |
         cd ${{ inputs.path }}
+        ls -la
         terraform ${{ inputs.command }}
       shell: bash
