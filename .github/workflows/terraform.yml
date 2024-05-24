@@ -1,0 +1,9 @@
+name: terraform
+on: [push]
+jobs:
+  validate-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          cd infrastructure/environments/dev
+          terraform validate
