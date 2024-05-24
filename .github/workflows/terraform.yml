@@ -4,6 +4,16 @@ jobs:
   validate-dev:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.8.3
+
+      - name: Terraform Validate
+        run: |
           cd infrastructure/environments/dev
           terraform validate
