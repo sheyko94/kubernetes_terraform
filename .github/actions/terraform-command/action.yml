@@ -1,0 +1,16 @@
+name: 'Terraform Command'
+description: 'Run a Terraform command'
+inputs:
+  path: 
+    description: 'The folder where the Terraform code is located'
+    required: true
+  command:
+    description: 'The Terraform command to run'
+    required: true
+runs:
+  using: "composite"
+  steps: 
+    - run: |
+        cd ${{ inputs.terraform-folder }}
+        terraform ${{ inputs.command }}
+      shell: bash

@@ -3,26 +3,31 @@ on: [push]
 jobs:
   validate-dev:
     runs-on: ubuntu-latest
+    env:
+      TERRAFORM_PATH: "infrastructure/environments/dev"
     steps:
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.1.6 # https://github.com/marketplace/actions/checkout
 
-      - uses: hashicorp/setup-terraform@v3.1.1
+      - uses: hashicorp/setup-terraform@v3.1.1 # https://github.com/marketplace/actions/hashicorp-setup-terraform
         with:
           terraform_version: 1.8.3
 
       - name: Terraform fmt
-        run:  |
-          cd infrastructure/environments/dev
-          terraform fmt -check
+        uses: ./.github/actions/terraform-command
+        with:
+          path: ${{env.TERRAFORM_PATH}}
+          command: fmt -check
         continue-on-error: true
 
       - name: Terraform Init
-        run:  |
-          cd infrastructure/environments/dev
-          terraform init
+        uses: ./.github/actions/terraform-command
+        with:
+          path: ${{env.TERRAFORM_PATH}}
+          command: init
 
       - name: Terraform Validate
-        run: |
-          cd infrastructure/environments/dev
-          terraform validate
+        uses: ./.github/actions/terraform-command
+        with:
+          path: ${{env.TERRAFORM_PATH}}
+          command: validate
