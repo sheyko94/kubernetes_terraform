@@ -1,10 +1,6 @@
 module "ecr" {
   source = "./../../modules/ecr"
 
-  ecr_name = [
-    "test", "test2"
-  ]
-  tags = {
-    Name = "test"
-  }
+  ecr_name  = local.ecr_name
+  tags      = local.tags
 }
