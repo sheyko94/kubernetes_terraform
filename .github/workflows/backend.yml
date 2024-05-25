@@ -16,10 +16,10 @@ jobs:
       - name: Mvn Package
         run: |
           cd $BACKEND_PATH
-          mvn package -DskipTests --settings $BACKEND_PATH/.m2/settings.xml
+          mvn package -DskipTests --settings .m2/settings.xml
       
       - name: Mvn Test
         run: |
           cd $BACKEND_PATH
-          mvn test --settings $BACKEND_PATH/.m2/settings.xml
+          mvn test --settings .m2/settings.xml
         
