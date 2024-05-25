@@ -1,5 +1,10 @@
 name: terraform
-on: [push]
+on: 
+  push:
+    paths:
+      - 'infrastructure/**'
+      - '.github/workflows/terraform.yml'
+      - '.github/actions/terraform-command/**'
 jobs:
   validate-dev:
     runs-on: ubuntu-latest

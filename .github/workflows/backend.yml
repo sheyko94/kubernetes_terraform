@@ -1,0 +1,25 @@
+name: backend
+on: 
+  push:
+    paths:
+      - 'services/backend-service/**'
+      - '.github/workflows/backend.yml'
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    env:
+      BACKEND_PATH: "services/backend-service"
+    steps:
+
+      - uses: actions/checkout@v4.1.6
+
+      - name: Mvn Package
+        run: |
+          cd $BACKEND_PATH
+          mvn package -DskipTests --settings $BACKEND_PATH/.m2/settings.xml
+      
+      - name: Mvn Test
+        run: |
+          cd $BACKEND_PATH
+          mvn test --settings $BACKEND_PATH/.m2/settings.xml
+        
