@@ -32,6 +32,6 @@ jobs:
           
       - name: ECR Publish
         run: |
-          aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username ${{ secrets.AWS_ACCESS_KEY_ID }} --password ${{ secrets.AWS_SECRET_ACCESS_KEY }} $AWS_ECR_ACCOUNT_URL
+          aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin $AWS_ECR_ACCOUNT_URL
           docker tag $BACKEND_NAME:latest $AWS_ECR_ACCOUNT_URL/$BACKEND_NAME:latest
           docker push $AWS_ECR_ACCOUNT_URL/$BACKEND_NAME:latest
