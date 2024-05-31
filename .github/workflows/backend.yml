@@ -28,3 +28,12 @@ jobs:
           cd $BACKEND_PATH
           docker build -t backend-service .
           
+      - name: ECR Publish
+        uses: docker://ghcr.io/kciter/aws-ecr-action:latest # https://github.com/marketplace/actions/aws-ecr
+        with:
+          access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+          region: ${{ secrets.AWS_REGION }}
+          repo: backend-service
+          tags: latest,${{ github.sha }}

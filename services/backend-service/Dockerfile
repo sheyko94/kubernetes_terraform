@@ -4,8 +4,8 @@ WORKDIR /app
 COPY pom.xml .
 COPY .m2/settings.xml /root/.m2/settings.xml
 COPY src ./src
-RUN mvn dependency:resolve --settings /root/.m2/settings.xml
-RUN mvn package -DskipTests --settings /root/.m2/settings.xml
+RUN --mount=type=cache,target=/root/.m2 mvn dependency:resolve --settings /root/.m2/settings.xml
+RUN --mount=type=cache,target=/root/.m2 mvn package -DskipTests --settings /root/.m2/settings.xml
 
 # Second stage: Run the application
 FROM openjdk:17-jdk-slim
