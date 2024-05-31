@@ -23,3 +23,8 @@ jobs:
           cd $BACKEND_PATH
           mvn test --settings .m2/settings.xml
         
+      - name: Docker Build
+        run: |
+          cd $BACKEND_PATH
+          docker build -t backend-service .
+          
