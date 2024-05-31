@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BACKEND_PATH: "services/backend-service"
+      BACKEND_NAME: "backend-service"
+      AWS_ECR_ACCOUNT_URL: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
     steps:
 
       - uses: actions/checkout@v4.1.6
@@ -26,14 +28,10 @@ jobs:
       - name: Docker Build
         run: |
           cd $BACKEND_PATH
-          docker build -t backend-service .
+          docker build -t $BACKEND_NAME .
           
       - name: ECR Publish
-        uses: docker://ghcr.io/kciter/aws-ecr-action:latest # https://github.com/marketplace/actions/aws-ecr
-        with:
-          access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          account_id: ${{ secrets.AWS_ACCOUNT_ID }}
-          region: ${{ secrets.AWS_REGION }}
-          repo: backend-service
-          tags: latest,${{ github.sha }}
+        run: |
+          aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username ${{ secrets.AWS_ACCESS_KEY_ID }} --password ${{ secrets.AWS_SECRET_ACCESS_KEY }} $AWS_ECR_ACCOUNT_URL
+          docker tag $BACKEND_NAME:latest $AWS_ECR_ACCOUNT_URL/$BACKEND_NAME:latest
+          docker push $AWS_ECR_ACCOUNT_URL/$BACKEND_NAME:latest
