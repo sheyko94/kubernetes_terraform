@@ -9,7 +9,7 @@ jobs:
   validate-dev:
     runs-on: ubuntu-latest
     env:
-      TERRAFORM_PATH: "infrastructure/environments/dev"
+      TERRAFORM_PATH: "infrastructure/terraform/environments/dev"
     steps:
 
       - uses: actions/checkout@v4.1.6 # https://github.com/marketplace/actions/checkout
