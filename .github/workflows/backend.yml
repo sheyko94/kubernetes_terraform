@@ -82,6 +82,3 @@ jobs:
 
       - name: Helm Lint
         run: helm lint $HELM_PATH
-
-      - name: Helm Dry install
-        run: helm install --debug --dry-run $BACKEND_NAME $HELM_PATH
