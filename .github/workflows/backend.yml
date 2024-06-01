@@ -4,27 +4,38 @@ on:
     paths:
       - 'services/backend-service/**'
       - '.github/workflows/backend.yml'
-jobs:
-  backend:
-    runs-on: ubuntu-latest
-    env:
-      BACKEND_PATH: "services/backend-service"
-      BACKEND_NAME: "backend-service"
-      AWS_ECR_ACCOUNT_URL: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
-    steps:
+env:
+  BACKEND_NAME: "backend-service"
+  BACKEND_PATH: "services/backend-service"
+  HELM_PATH: "services/backend-service/helm"
+  AWS_ECR_ACCOUNT_URL: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
 
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      
       - uses: actions/checkout@v4.1.6
 
       - name: Mvn Package
         run: |
           cd $BACKEND_PATH
           mvn package -DskipTests --settings .m2/settings.xml
-      
+
       - name: Mvn Test
         run: |
           cd $BACKEND_PATH
           mvn test --settings .m2/settings.xml
-        
+
+      - name: Helm Lint
+        run: helm lint $HELM_PATH
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+
       - name: Docker Build
         run: |
           cd $BACKEND_PATH
