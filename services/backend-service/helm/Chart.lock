@@ -1,0 +1,6 @@
+dependencies:
+- name: common-chart
+  repository: file://../../../infrastructure/helm/common-chart
+  version: 1.0.0
+digest: sha256:4953e81af82d3e9286b19dd6952e3ca4256a88d7e4716a08fc91e498eb583a49
+generated: "2024-06-01T18:27:38.020711+02:00"

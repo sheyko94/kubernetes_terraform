@@ -25,9 +25,13 @@
 - [Helm](https://helm.sh/docs/intro/using_helm/)
 - [Helm Charts](https://helm.sh/docs/topics/charts/)
     ´´´helm package helm´´´
+    ´´´helm lint ./helm´´´
     ´´´helm install backend-service ./backend-service-1.0.0.tgz´´´ pipeline
     ´´´helm install backend-service ./helm´´´ local
     ´´´helm upgrade backend-service ./helm´´´ 
+    ´´´helm get manifest backend-service´´´ this gives you the manifest once deployed
+    ´´´helm install --debug --dry-run backend-service ./helm/ ´´´ this gives you the manifest without deploying - for manual testing the output
+    ´´´helm dependency build ./helm´´´
 
 
     [text](services/backend-service/helm/templates/deployment.yaml)

@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: backend-service-configmap
+  name: {{ .Release.Name }}-configmap
+  labels:
+    {{- include "common.labels" . | nindent 4 }}
 data:
-  test: "Hello World"
+  tags: {{ join "," .Values.tags }}

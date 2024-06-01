@@ -3,3 +3,7 @@ kubeVersion: ">= 1.23.3"
 name: backend-service
 version: 1.0.0
 type: application
+dependencies:
+  - name: common-chart
+    version: 1.0.0
+    repository: "file://../../../infrastructure/helm/common-chart"

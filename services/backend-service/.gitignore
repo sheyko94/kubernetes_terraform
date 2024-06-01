@@ -39,3 +39,4 @@ build/
 
 ### Helm ###
 backend-service-1.0.0.tgz
+helm/charts

@@ -1,0 +1,5 @@
+apiVersion: v2
+kubeVersion: ">= 1.23.3"
+name: common-chart
+version: 1.0.0
+type: library
