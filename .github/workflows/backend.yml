@@ -74,6 +74,9 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
 
+      - name: Helm Dependency Build
+        run: helm dependency build $HELM_PATH
+
       - name: Helm Lint
         run: helm lint $HELM_PATH
 
