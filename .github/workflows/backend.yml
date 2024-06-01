@@ -7,7 +7,7 @@ on:
 env:
   BACKEND_NAME: "backend-service"
   BACKEND_PATH: "services/backend-service"
-  HELM_PATH: "./helm"
+  HELM_PATH: ".services/backend-service/helm"
   AWS_ECR_ACCOUNT_URL: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
 
 jobs:
@@ -50,7 +50,9 @@ jobs:
         run: ls -R
 
       - name: Docker Build
-        run: docker build -t $BACKEND_NAME .
+        run: |
+          cd $BACKEND_PATH
+          docker build -t $BACKEND_NAME .
           
       - name: ECR Publish
         run: |
