@@ -25,4 +25,9 @@
 - [Helm](https://helm.sh/docs/intro/using_helm/)
 - [Helm Charts](https://helm.sh/docs/topics/charts/)
     ´´´helm package helm´´´
-    ´´´helm install backend-service ./backend-service-1.0.0.tgz´´´
+    ´´´helm install backend-service ./backend-service-1.0.0.tgz´´´ pipeline
+    ´´´helm install backend-service ./helm´´´ local
+    ´´´helm upgrade backend-service ./helm´´´ 
+
+
+    [text](services/backend-service/helm/templates/deployment.yaml)
