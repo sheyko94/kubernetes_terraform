@@ -7,7 +7,7 @@ on:
 env:
   BACKEND_NAME: "backend-service"
   BACKEND_PATH: "services/backend-service"
-  HELM_PATH: ".services/backend-service/helm"
+  HELM_PATH: "services/backend-service/helm"
   AWS_ECR_ACCOUNT_URL: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
 
 jobs:
