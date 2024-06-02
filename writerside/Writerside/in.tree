@@ -4,7 +4,7 @@
 
 <instance-profile id="Writerside/hi"
                  name="Instance Name"
-                 start-page="Github Actions.md">
+                 start-page="GithubActions.md">
 
-    <toc-element topic="Github Actions.md"/>
+    <toc-element topic="GithubActions.md"/>
 </instance-profile>
