@@ -30,16 +30,6 @@ jobs:
           fetch-depth: 0
           sparse-checkout: ${{ env.WRITERSIDE_PATH }}
           sparse-checkout-cone-mode: false
-          path: .
-
-      - name: Ls 
-        run: ls -R
-
-      - name: move 
-        run: |
-            mkdir Writerside
-            mv $WRITERSIDE_PATH/** Writerside/
-            rm -rf writerside
 
       - name: Ls 
         run: ls -R
