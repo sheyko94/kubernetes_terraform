@@ -3,7 +3,8 @@ name: writerside
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
+    paths:
+      - 'writerside/**'
 
 env:
   INSTANCE: 'Writerside/hi'
