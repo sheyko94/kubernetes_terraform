@@ -27,6 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          path: ${{ env.WRITERSIDE_PATH }}
 
       - name: Ls 
         run: ls -R
