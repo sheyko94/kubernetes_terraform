@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
     paths:
-      - 'writerside/**'
+      - 'writerside/Writerside/**'
       - '.github/workflows/writerside.yml'
 
 permissions:
