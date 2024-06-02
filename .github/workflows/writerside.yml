@@ -39,6 +39,7 @@ jobs:
         run: |
             mkdir Writerside
             mv $WRITERSIDE_PATH/** Writerside/
+            rm writerside
 
       - name: Ls 
         run: ls -R
