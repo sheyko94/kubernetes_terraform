@@ -35,8 +35,8 @@ jobs:
         run: ls -R
 
       - name: move 
-        run: cd $WRITERSIDE_PATH
-
+        run: move $WRITERSIDE_PATH/** .
+        
       - name: Ls 
         run: ls -R
 
