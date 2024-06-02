@@ -36,7 +36,9 @@ jobs:
         run: ls -R
 
       - name: move 
-        run: mv $WRITERSIDE_PATH/** Writerside/
+        run: |
+            mkdir Writerside
+            mv $WRITERSIDE_PATH/** Writerside/
 
       - name: Ls 
         run: ls -R
