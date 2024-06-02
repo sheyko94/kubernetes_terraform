@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - 'writerside/**'
+      - '.github/workflows/writerside.yml'
 
 permissions:
   id-token: write
