@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          sparse-checkout: ${{ env.WRITERSIDE_PATH }}/**
+          sparse-checkout: ${{ env.WRITERSIDE_PATH }}
           sparse-checkout-cone-mode: false
 
       - name: Ls 
