@@ -37,6 +37,9 @@ jobs:
       - name: move 
         run: cd $WRITERSIDE_PATH
 
+      - name: Ls 
+        run: ls -R
+
       - name: Build docs using Writerside Docker builder
         uses: JetBrains/writerside-github-action@v4
         with:
