@@ -19,10 +19,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+        
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          sparse-checkout: 'writerside'
 
       - name: Build docs using Writerside Docker builder
         uses: JetBrains/writerside-github-action@v4
