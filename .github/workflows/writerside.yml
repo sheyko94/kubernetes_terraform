@@ -2,7 +2,8 @@ name: Build documentation
 
 on:
   push:
-    branches: ["main"]
+    branches: 
+      - main
     paths:
       - 'writerside/Writerside/**'
       - '.github/workflows/writerside.yml'
@@ -26,12 +27,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          path: '.'
-          sparse-checkout: $WRITERSIDE_PATH
-          sparse-checkout-cone-mode: false
+          path: $WRITERSIDE_PATH
 
       - name: Ls 
         run: ls -R
+
+      - name: move 
+        run: cd $WRITERSIDE_PATH
 
       - name: Build docs using Writerside Docker builder
         uses: JetBrains/writerside-github-action@v4
