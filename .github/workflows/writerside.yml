@@ -15,7 +15,7 @@ env:
   INSTANCE: 'Writerside/hi'
   ARTIFACT: 'webHelpHI2-all.zip'
   DOCKER_VERSION: '241.15989'
-  WRITERSIDE_PATH: 'writerside'
+  WRITERSIDE_PATH: 'writerside/Writerside'
 
 jobs:
   build:
