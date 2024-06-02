@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="hi"
-                 name="IaC"
+                 name="Portfolio"
                  start-page="starter.md">
 
     <toc-element topic="starter.md"/>
