@@ -3,9 +3,14 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="hi"
-                 name="Portfolio"
-                 start-page="starter.md">
+                 name="Portfolio - Iván González Cabral"
+                 start-page="hello.md">
 
-    <toc-element topic="starter.md"/>
+    <toc-element topic="hello.md"/>
+    <toc-element topic="docker.md"/>
+    <toc-element topic="kubernetes.md"/>
+    <toc-element topic="helm.md"/>
     <toc-element topic="terraform.md"/>
+    <toc-element topic="aws.md"/>
+    <toc-element topic="backend.md"/>
 </instance-profile>
