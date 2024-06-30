@@ -6,19 +6,10 @@ tags:
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: backend-service
   tag: "latest"
   pullPolicy: IfNotPresent
 
 service:
-  name: my-simple-app
-  type: ClusterIP
-  port: 80
-
-resources: {}
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}
+  name: backend-service
+  port: 8080
