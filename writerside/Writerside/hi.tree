@@ -13,5 +13,6 @@
     <toc-element topic="terraform.md"/>
     <toc-element topic="aws.md"/>
     <toc-element topic="backend.md"/>
+    <toc-element topic="serverless.md"/>
     <toc-element topic="resources.md"/>
 </instance-profile>
