@@ -31,3 +31,6 @@ Return the manifest on a Helm chart without installing it - good for debugging p
 
 Install Helm chart dependencies
 <code-block lang="console">helm dependency build ./helm</code-block>
+
+Uninstall a Helm chart
+<code-block lang="console">helm uninstall backend-service</code-block>
