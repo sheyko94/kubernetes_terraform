@@ -4,4 +4,5 @@ locals {
   instance_type           = "t2.micro"
   tags                    = { Terraform = "yes" }
   ecr_name                = [ "backend-service"]
+  lambda_bucket_name      = "lambda-bucket-test-asdasdasdasd"
 }
