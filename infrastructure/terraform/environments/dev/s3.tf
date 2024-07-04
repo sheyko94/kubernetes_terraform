@@ -1,7 +1,7 @@
-module "s3" {
+module "main-bucket-test-asdasdasdasd" {
   source = "./../../modules/s3"
 
-  bucket_name     = local.lambda_bucket_name
+  bucket_name     = "main-bucket-test-asdasdasdasd"
   tags            = local.tags
 }
 

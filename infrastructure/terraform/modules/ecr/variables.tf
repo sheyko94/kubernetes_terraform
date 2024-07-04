@@ -1,7 +1,6 @@
 variable "ecr_name" {
   description = "The name of the repository"
-  type        = list(string)
-  default     = []
+  type        = string
 }
 
 variable "tags" {

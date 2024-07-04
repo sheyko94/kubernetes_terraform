@@ -1,13 +1,16 @@
 variable "ami" {
   description = "ami"
   type        = string
-  default     = null
 }
 
 variable "instance_type" {
   description = "instance_type"
   type        = string
-  default     = null
+}
+
+variable "subnet_id" {
+  description = "the subnet id to launch the instance on"
+  type        = string
 }
 
 variable "tags" {
