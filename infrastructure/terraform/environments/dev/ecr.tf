@@ -1,4 +1,4 @@
-module "backend-service-repository" {
+module "backend-service" {
   source = "./../../modules/ecr"
 
   ecr_name  = "backend-service"
