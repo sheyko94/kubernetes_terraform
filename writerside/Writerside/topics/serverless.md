@@ -19,7 +19,7 @@ Invoke the Lambda locally to test it
 <code-block lang="console">sam local invoke "HelloWorldFunction" -e events/event.json</code-block>
 
 Packages the lambda and upload it to an S3 bucket
-<code-block lang="console">sam package --output-template-file packaged.yaml --s3-bucket main-bucket-test-asdasdasdasd</code-block>
+<code-block lang="console">sam package --output-template-file packaged.yaml --s3-bucket portfolio-main-bucket-test-asdasdasdasd</code-block>
 
 Deploys the lambda
 <code-block lang="console">sam deploy --template-file packaged.yaml --stack-name LambdaStack</code-block>
