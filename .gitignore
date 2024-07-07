@@ -1,6 +1,9 @@
 *.dtmp
 *.drawio.bkp
 
+# IntelliJ
+.idea/
+
 # Terraform
 .terraform
 .terraform.lock.hcl
