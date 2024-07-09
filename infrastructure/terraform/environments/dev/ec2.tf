@@ -1,4 +1,4 @@
-module "ec2-1" {
+module "backend-service-1" {
   source = "./../../modules/ec2"
 
   ami             = local.free_tier_ec2_instance_ami
@@ -7,7 +7,7 @@ module "ec2-1" {
   tags            = local.tags
 }
 
-module "ec2-2" {
+module "backend-service-2" {
   source = "./../../modules/ec2"
 
   ami             = local.free_tier_ec2_instance_ami

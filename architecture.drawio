@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-07-04T06:42:15.763Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="ao2uKPYIymJ8rkPWl2p4" version="24.6.4" type="device">
+<mxfile host="Electron" modified="2024-07-08T07:09:14.348Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="ZtyDZcUEarp9fkzzz_RS" version="24.6.4" type="device">
   <diagram name="Page-1" id="6VT9Y9p8oV1-klFR96_O">
     <mxGraphModel dx="1306" dy="831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" background="#000000" math="0" shadow="0">
       <root>
@@ -60,17 +60,17 @@
         <mxCell id="GcN3X9JC5jZaIeVV5LYO-26" value="Public Internet&lt;br&gt;gateway: public-internet-gw" style="sketch=0;outlineConnect=0;fontColor=#ffffff;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.internet_gateway;" vertex="1" parent="1">
           <mxGeometry x="680" y="380" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="GcN3X9JC5jZaIeVV5LYO-36" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.instance;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+        <mxCell id="GcN3X9JC5jZaIeVV5LYO-36" value="backend-service" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.instance;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
           <mxGeometry x="500" y="387" width="40" height="43" as="geometry" />
         </mxCell>
-        <mxCell id="GcN3X9JC5jZaIeVV5LYO-37" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.instance;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+        <mxCell id="GcN3X9JC5jZaIeVV5LYO-37" value="backend-service" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.instance;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
           <mxGeometry x="890" y="387" width="40" height="43" as="geometry" />
         </mxCell>
-        <mxCell id="GcN3X9JC5jZaIeVV5LYO-38" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.db_on_instance;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
-          <mxGeometry x="500" y="540" width="40" height="44.5" as="geometry" />
+        <mxCell id="GcN3X9JC5jZaIeVV5LYO-38" value="postgres - primary" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.db_on_instance;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="470" y="520" width="40" height="44.5" as="geometry" />
         </mxCell>
-        <mxCell id="GcN3X9JC5jZaIeVV5LYO-39" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.db_on_instance;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
-          <mxGeometry x="900" y="530" width="40" height="44.5" as="geometry" />
+        <mxCell id="GcN3X9JC5jZaIeVV5LYO-39" value="postgres - replica" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.db_on_instance;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="880" y="520" width="40" height="44.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
