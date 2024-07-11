@@ -15,9 +15,20 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [ '17' ]
+        java-distribution: [ 'corretto' ]
     steps:
       
       - uses: actions/checkout@v4.1.6
+
+      - name: Set up JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v4.2.1
+        with:
+          java-version: ${{ matrix.java-version }}
+          cache: 'maven'
+          distribution: ${{ matrix.java-distribution }}
 
       - name: Mvn Install
         run: |
