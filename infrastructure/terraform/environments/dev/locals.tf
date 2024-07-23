@@ -1,4 +1,5 @@
 locals {
+  aws_account_id                  = "781356123457"
   aws_region                      = "eu-central-1"
   tags                            = { Environment = "dev", Terraform = "yes" }
   all_ips                         = "0.0.0.0/0"
